@@ -1,0 +1,50 @@
+.btn {
+  background-color: $color-primary;
+  color: $color-light;
+  display: inline-block;
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; 
+}
+
+.btn > :link,
+.btn > :active,
+.btn > :visited {
+  color: $color-light;
+  text-decoration: none;
+  transition: color 0.65s;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: $color-light;
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+  z-index: -1; 
+}
+
+.btn:hover {
+  color: $color-dark;
+  cursor: pointer; 
+}
+
+.btn:hover::before {
+  transform: scaleY(1);
+  width: 100%; 
+}
+
+.btn:hover > :link,
+.btn:hover > :active,
+.btn:hover > :visited {
+  color: $color-dark;
+  transform: translateZ(10000); 
+}

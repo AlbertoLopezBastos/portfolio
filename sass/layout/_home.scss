@@ -1,0 +1,151 @@
+.home {
+  background-color: #1c1d25;
+  color: $color-light;
+  border-bottom: 1vw solid $color-primary;
+  box-shadow: 0 1rem 2rem rgba(51, 51, 51, 0.4); 
+}
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 70vw;
+  margin: 0 auto; 
+}
+
+.navbar__btn {
+  font-size: 2rem;
+  padding: 0 3rem;
+  transition: all 0.2s;
+  position: relative; 
+}
+
+.navbar__btn:link, .navbar__btn:active, .navbar__btn:visited {
+  color: $color-light;
+  text-decoration: none; 
+}
+
+.navbar__btn::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: $color-primary;
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  transform: translate(-50%);
+  transition: width 0.2s; 
+}
+
+.navbar__btn:hover {
+  cursor: pointer;
+  color: $color-primary;
+}
+  
+.navbar__btn:hover::after {
+  width: 50%; 
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rem 0 30rem 0; 
+}
+
+.hero__presentation {
+  padding-top: 10rem;
+  margin-left: 25rem; 
+}
+
+.hero__social {
+  height: 35rem;
+  margin-right: 5rem;
+  content: "";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hero__icon {
+  fill: $color-light;
+  height: 6rem;
+  width: 6rem;
+  z-index: 1;
+  transition: all 0.2s; 
+}
+
+.hero__icon:hover {
+  fill: $color-primary;
+  transform: translateY(-3px);
+  cursor: pointer; 
+}
+
+@media only screen and (max-width: 75em) {
+  .hero__presentation {
+    margin-left: 10rem; 
+  } 
+}
+
+@media only screen and (max-width: 56.25em) {
+  .navbar {
+    width: 80vw;
+   }
+
+  .hero {
+    flex-direction: column;
+    padding: 15rem 0 15rem 0; 
+  }
+
+  .hero__presentation {
+    padding: 5rem 0;
+    margin: auto;
+    text-align: center;
+    }
+
+  .hero__social {
+    height: 100%;
+    margin-right: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero__icon {
+    padding: 3rem; 
+  } 
+}
+
+@media only screen and (max-width: 37.5em) {
+
+  .navbar {
+    width: 100vw;
+    justify-content: center; 
+  }
+
+  .hero {
+    padding: 15rem 0 25rem 0; 
+  }
+  
+  .hero h1 {
+    font-size: 6rem; 
+  }
+
+  .hero h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .hero__icon {
+    padding: 1.5rem;
+    height: 5rem;
+    width: 5rem; 
+  } 
+}
+
+@media only screen and (max-width: 31.25em) {
+  .hero {
+    padding: 2rem 0 15rem 0; 
+  } 
+}

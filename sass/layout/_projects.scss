@@ -1,0 +1,159 @@
+.projects {
+  background-color: #1c1d25;
+  padding-bottom: 5rem; 
+}
+
+.work-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, min-content);
+  justify-items: center;
+  row-gap: 10rem;
+  column-gap: 7.5rem;
+  padding: 5rem 0; 
+}
+
+.project {
+  box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.2);
+  height: 25rem;
+  width: 40rem;
+  transition: all 0.4s;
+  border: 3px solid $color-primary;
+  margin: 2rem 0 1rem 0; 
+}
+
+.project__figure {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; 
+}
+
+.project__figure a {
+  color: #f1f2f3; 
+}
+
+.project__img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  z-index: -1;
+  transition: all 0.4s ease-in-out; 
+}
+
+.project__img-1 {
+  background-image: url("../img/projects/acme.jpg"); 
+}
+
+.project__img-2 {
+  background-image: url("../img/projects/mytunes.jpg"); 
+}
+
+.project__img-3 {
+  background-image: url("../img/projects/netflix-clone.jpg"); 
+}
+
+.project__title, .project__web, .project__github {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.4s ease-in-out; 
+}
+
+.project__web, .project__github {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  bottom: 4rem; 
+}
+
+.project__web:hover, .project__github:hover {
+  color: $color-primary; 
+}
+
+.project__title {
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%); 
+}
+
+.project__web {
+  left: 4rem; 
+}
+
+.project__github {
+  right: 4rem; 
+}
+
+.project__web2, .project__github2 {
+  color: rgba(244, 244, 244, 0.8);
+  border: 1px solid rgba(244, 244, 244, 0.5);
+  box-shadow: 0 0.25rem 0.5rem rgba(244, 244, 244, 0.2);
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  opacity: 0; 
+}
+
+@media only screen and (hover: none) {
+  .project__web2, .project__github2 {
+    opacity: 1; 
+  } 
+}
+
+.project__web2 {
+  float: left;
+}
+
+.project__github2 {
+  float: right; 
+}
+
+.project:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); 
+}
+
+.project:hover .project__img {
+  filter: blur(2px) brightness(20%);
+  transform: scale(1.05); 
+}
+
+.project:hover .project__web {
+  opacity: 1; 
+}
+
+.project:hover .project__title {
+  opacity: 1; 
+}
+
+.project:hover .project__github {
+  opacity: 1; 
+}
+
+
+.project-thumb {
+  transform: scale(1);
+  transition: 0.25s ease-in-out; 
+}
+
+@media only screen and (max-width: 120em) {
+  .work-grid {
+    grid-template-columns: repeat(2, min-content); 
+  } 
+}
+
+@media only screen and (max-width: 56.25em) {
+  .work-grid {
+    grid-template-columns: repeat(1, min-content);
+    row-gap: 5%;
+    column-gap: 0;
+    padding: 5rem 0 25rem 0; 
+  }
+  
+  .project {
+    height: 20rem;
+    width: 30rem; 
+  }
+}
